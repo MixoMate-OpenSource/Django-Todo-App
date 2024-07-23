@@ -16,7 +16,7 @@ pipeline {
             }
         }
 
-        stage("Push to Docker Hub") {
+        stage("Push to Docker Hubs") {
             steps {
                 echo "Pushing the Docker image to Docker Hub"
                 withCredentials([usernamePassword(credentialsId: "dockerHub", passwordVariable: "dockerHubPass", usernameVariable: "dockerHubUser")]) {
